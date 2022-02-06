@@ -12,6 +12,7 @@ namespace M2hw3
             var x = present.TakeCandy("Black Chocolate Candies with nuts");
             Console.WriteLine(x);
             Console.WriteLine("---------------------------");
+            Console.WriteLine("Virtual Methods :");
             var chocolateCandies = new ChocolateCandies();
             chocolateCandies.Messege();
             var blackChocolateCandies = new BlackChocolateCandies();

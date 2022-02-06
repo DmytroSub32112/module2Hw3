@@ -13,18 +13,21 @@ namespace M2hw3
             new ChocolateCandies { Calories = 535, Weight = 45, Name = "Chocolate Candies" },
             new BlackChocolateCandies { Calories = 505, Weight = 40, Name = "Black Chocolate Candies" },
             new BlackChocolateCandiesWithNuts { Calories = 575, Weight = 50, Name = "Black Chocolate Candies with nuts" },
-            new AeratedBlackChocolatesCandiesWithNuts { Calories = 575, Weight = 60, Name = "Aerated Black Chocolates Candies With Nuts" }
+            new AeratedBlackChocolatesCandiesWithNuts { Calories = 575, Weight = 60, Name = "Aerated Black Chocolates Candies With Nuts" },
+            new BlackChocolateCandiesWithNuts { Calories = 575, Weight = 30, Name = "Black Chocolate Candies with nuts" }
         };
         private Consider1 _consider = new Consider1();
         public void Print()
         {
             Console.WriteLine("Present:");
             var weight = 0;
+            var i = 0;
             foreach (var item in _candyArr)
             {
+                i++;
                 var x = _consider.ConsiderCalories(item.Weight, item.Calories);
                 weight += item.Weight;
-                Console.WriteLine($"{item.Name},{item.Calories} Kk,{item.Weight} Gr,calories on weiht = {x}");
+                Console.WriteLine($"{i}){item.Name},{item.Calories} Kk,{item.Weight} Gr,calories on weiht = {x}");
             }
 
             Console.WriteLine($"Weight box is {weight},gram");
